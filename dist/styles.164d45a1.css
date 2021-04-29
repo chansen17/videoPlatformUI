@@ -221,7 +221,52 @@ body {
   background: purple;
   margin-top: 1.25rem;
   border-radius: 15px;
-  padding: 0.25rem;
+  background: #252836;
+  color: #eee;
+}
+.sub-content .sub-content-grid .sub-featured header {
+  height: 55%;
+  width: 100%;
+  position: relative;
+  background-image: url("https://images.pexels.com/photos/1503009/pexels-photo-1503009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.sub-content .sub-content-grid .sub-featured header span {
+  font-size: 0.65rem;
+  color: #fff;
+  background: rgba(85, 85, 85, 0.795);
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+.sub-content .sub-content-grid .sub-featured header .sub-featured-portrait {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 1px solid #b6b6b6;
+  position: absolute;
+  bottom: -22px;
+  right: 30px;
+}
+.sub-content .sub-content-grid .sub-featured header .sub-featured-portrait::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: orangered;
+}
+.sub-content .sub-content-grid .sub-featured footer {
+  height: 45%;
+  width: 100%;
+  position: relative;
 }
 
 /*# sourceMappingURL=/styles.164d45a1.css.map */
