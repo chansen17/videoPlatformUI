@@ -277,11 +277,16 @@ body {
                 margin: 1.5rem;
                 font-size: 1.5rem;
             }
+
+            .featured-user {
+                font-size: .9rem;
+            }
             
             .video-info {
                 display: flex;
                 align-items: center;
                 color: #fff;
+                font-size: .75rem;
 
                 .img-container {
                     margin: 1rem 1.5rem;
@@ -316,13 +321,18 @@ body {
                 font-size: 1.5rem;
             }
 
+            .featured-user {
+                font-size: .9rem;
+                margin: .25rem 0;
+            }
+
             .video-info {
                 display: flex;
                 flex-direction: column;
                 align-items: left;
                 color: #fff;
                 margin: 0 1rem;
-                font-size: .8rem;
+                font-size: .65rem;
 
                 .img-container {
 
@@ -333,6 +343,7 @@ body {
                         object-fit: cover;
                         border: 1px solid #ccc;
                         padding: 4px;
+                        margin: .5rem 0;
                     }
                 }
             }
