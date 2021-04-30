@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover | Travel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
     <link rel="stylesheet" href="./styles.scss">
 </head>
 <body>
@@ -18,13 +18,28 @@
             </div>
             <nav class="nav">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-home"></i></span>Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-stream"></i></span>Trending</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-video"></i></span>Streaming</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-scroll"></i></span>Playlist</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-arrow-circle-up"></i></span>Upload</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-map-marker-alt"></i></span>Bookmark</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+                    <li class="nav-item animate__animated animate__fadeInLeft">Menu</li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft" href="#"><span><i class="fas fa-home"></i></span>Videos</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft" href="#"><span><i class="fas fa-stream"></i></span>Trending</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft" href="#"><span><i class="fas fa-video"></i></span>Streaming</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft" href="#"><span><i class="fas fa-scroll"></i></span>Playlist</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft" href="#"><span><i class="fas fa-map-marker-alt"></i></span>Bookmark</a></li>
+                    <br>
+                    <hr class="line-break"/>
+                    <br>
+                    <li class="nav-item nav-link animate__animated animate__fadeInLeft animate__delay-1s">Categories</li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft animate__delay-1s" href="#"><span><i class="fas fa-arrow-circle-up"></i></span>Live Stream</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft animate__delay-1s" href="#"><span><i class="fas fa-sign-out-alt"></i></span>Tutorial</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft animate__delay-1s" href="#"><span><i class="fas fa-sign-out-alt"></i></span>Competition</a></li>
+                    <li class="nav-item"><a class="nav-link animate__animated animate__fadeInLeft animate__delay-1s" href="#"><span><i class="fas fa-sign-out-alt"></i></span>Community</a></li>
+                    <br>
+                    <br>
+                    <li class="nav-item night-mode">
+                        <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                        </label>
+                    </li>
 
                 </ul>
             </nav>
@@ -36,10 +51,10 @@
                 </div>
                 <div class="spacer"></div>
                 <div class="right">
-                    <img src="https://images.pexels.com/photos/5588216/pexels-photo-5588216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="user portrait" id="portrait">
+                    <img loading="lazy" src="https://images.pexels.com/photos/5588216/pexels-photo-5588216.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="user portrait" id="portrait">
                     <h5 class="user-name">Johnny Tsunami</h5>
                     <span><i class="fas fa-angle-down"></i></span>
-                    <span><i class="fas fa-bell"></i></span>
+                    <span><i id="bellNotification" class="fas fa-bell"></i></span>
                 </div>
             </header>
 
@@ -47,11 +62,11 @@
                 <div class="container">
                     <h2 class="lead-title">Discover</h2>
                     <div class="lead-content-grid">
-                        <div class="first-featured featured">
+                        <div class="first-featured featured animate__animated animate__fadeInLeft">
                             <h2 class="featured-title">How to do Basic Jumping and how to land safely</h2>
                             <div class="video-info">
                                 <div class="img-container">
-                                    <img class="featured-portrait" src="https://images.pexels.com/photos/1503009/pexels-photo-1503009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="portrait of skater">
+                                    <img loading="lazy" class="featured-portrait" src="https://images.pexels.com/photos/1503009/pexels-photo-1503009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="portrait of skater">
                                 </div>
                                 <div class="data-container">
                                     <h5 class="featured-user">Thomas Hope</h5>
@@ -61,11 +76,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="second-featured featured">
+                        <div class="second-featured featured animate__animated animate__fadeInLeft animate__delay-1s">
                             <h2 class="second-featured-title">Skateboard Tips You need to know</h2>
                             <div class="video-info">
                                 <div class="img-container">
-                                    <img class="featured-portrait" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="portrait of skater">
+                                    <img loading="lazy" class="featured-portrait" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="portrait of skater">
                                 </div>
                                 <div class="data-container">
                                     <h5 class="featured-user">Thomas Hope</h5>
@@ -83,40 +98,76 @@
                 <div class="container">
                     <h2 class="sub-title">Most Watched</h2>
                     <div class="sub-content-grid">
-                        <div class="sub-featured first">
+                        <div class="sub-featured first animate__animated animate__fadeInLeft animate__delay-1s">
                             <header>
                                 <span>7 min</span>
-                                <img src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                <div class="sub-portrait-container">
+                                    <img loading="lazy" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
                             </header>        
                             <footer>
-                                
+                                <h5 class="sub-user-name">Andy Williams <i class="fas fa-circle green"></i></h5>
+                                <p class="sub-description">Lorem ipsum dolor sit ameisicing.</p>
+                                <div class="sub-data-container">
+                                    <div class="views">53k views</div>
+                                    <div class="dot">•</div>
+                                    <div class="date">2 weeks ago</div>
+                                </div>
                             </footer>
                         </div>
-                        <div class="sub-featured second">
+                        <div class="sub-featured second animate__animated animate__fadeInLeft animate__delay-2s">
                             <header>
                                 <span>7 min</span>
-                                <img src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                <div class="sub-portrait-container">
+                                    <img loading="lazy" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
                             </header>        
                             <footer>
-                                
+                                <h5 class="sub-user-name">Andy Williams <i class="fas fa-circle orange"></i></h5>
+                                <p class="sub-description">Lorem ipsum dolor sit icing.</p>
+                                <div class="sub-data-container">
+                                    <div class="views">53k views</div>
+                                    <div class="dot">•</div>
+                                    <div class="date">2 weeks ago</div>
+                                </div>
                             </footer>
                         </div>
-                        <div class="sub-featured third">
+                        <div class="sub-featured third animate__animated animate__fadeInLeft animate__delay-3s">
                             <header>
                                 <span>7 min</span>
-                                <img src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                <div class="sub-portrait-container">
+                                    <img loading="lazy" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
                             </header>        
                             <footer>
-                                
+                                <h5 class="sub-user-name">Andy Williams <i class="fas fa-circle orange"></i></h5>
+                                <p class="sub-description">Lorem ipsum dolor sit amet, consing.</p>
+                                <div class="sub-data-container">
+                                    <div class="views">53k views</div>
+                                    <div class="dot">•</div>
+                                    <div class="date">2 weeks ago</div>
+                                </div>
                             </footer>
                         </div>
-                        <div class="sub-featured forth">
+                        <div class="sub-featured forth animate__animated animate__fadeInLeft animate__delay-4s">
                             <header>
                                 <span>7 min</span>
-                                <img src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                <div class="sub-portrait-container">
+                                    <img loading="lazy" src="https://images.pexels.com/photos/7646197/pexels-photo-7646197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="sub featured portrait" class="sub-featured-portrait">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
                             </header>        
                             <footer>
-                                
+                                <h5 class="sub-user-name">Andy Williams <i class="fas fa-circle green"></i></h5>
+                                <p class="sub-description">Lorem ipsum dolor sidipisicing.</p>
+                                <div class="sub-data-container">
+                                    <div class="views">53k views</div>
+                                    <div class="dot">•</div>
+                                    <div class="date">2 weeks ago</div>
+                                </div>
                             </footer>
                         </div>
                     </div>
@@ -126,5 +177,13 @@
     </div>
 
     
+<!-- Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('#bellNotification', {
+        content: 'You have 7 Notifications!',
+      });
+</script>
 </body>
 </html>
