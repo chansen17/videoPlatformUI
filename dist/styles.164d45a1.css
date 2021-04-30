@@ -17,23 +17,29 @@ body {
 }
 
 .dashboard {
-  max-width: 1300px;
   min-height: 90vh;
-  width: 100%;
   height: 100%;
+  max-width: 1300px;
+  width: 100%;
   background: #201D2B;
   color: #eee;
   border-radius: 15px;
   display: grid;
-  grid-template-columns: 17vw auto;
+  grid-template-columns: 18vw auto;
 }
 
 .sidebar {
   position: fixed;
-  width: 15vw;
   min-height: 90vh;
   border-top-left-radius: 15px;
-  background: #292034;
+  width: 0;
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .sidebar {
+    width: 15vw;
+    display: block;
+  }
 }
 .sidebar .night-mode {
   /* The switch - the box around the slider */
@@ -183,6 +189,7 @@ body {
 .header .right .fa-bell {
   margin-left: 4rem;
   position: relative;
+  padding: 0.25rem;
 }
 .header .right .fa-bell:hover {
   cursor: pointer;
@@ -190,8 +197,8 @@ body {
 .header .right .fa-bell::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 4px;
+  right: 3px;
   height: 6px;
   width: 6px;
   border-radius: 50%;
@@ -206,15 +213,20 @@ body {
 }
 
 .lead-content {
-  height: 400px;
+  min-height: 400px;
 }
 .lead-content .container .lead-title {
   font-size: 2rem;
 }
 .lead-content .lead-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   max-width: 95%;
+}
+@media screen and (min-width: 960px) {
+  .lead-content .lead-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .lead-content .lead-content-grid .first-featured {
   margin: 1.25rem 0;
@@ -224,6 +236,13 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
+  transition: 0.2s all ease-in-out;
+}
+.lead-content .lead-content-grid .first-featured:hover {
+  transform: scale(1.05);
+  transition: 0.2s all ease-in-out;
+  z-index: 9;
+  cursor: pointer;
 }
 .lead-content .lead-content-grid .first-featured .featured-title {
   color: #fff;
@@ -261,6 +280,13 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
+  transition: 0.2s all ease-in-out;
+}
+.lead-content .lead-content-grid .second-featured:hover {
+  transform: scale(1.05);
+  transition: 0.2s all ease-in-out;
+  z-index: 9;
+  cursor: pointer;
 }
 .lead-content .lead-content-grid .second-featured .second-featured-title {
   color: #333;
@@ -300,8 +326,13 @@ body {
 }
 .sub-content .sub-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
+}
+@media screen and (min-width: 960px) {
+  .sub-content .sub-content-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 .sub-content .sub-content-grid .sub-featured {
   height: 240px;
@@ -310,18 +341,36 @@ body {
   border-radius: 15px;
   background: #252836;
   color: #eee;
+  transition: 0.2s all ease-in-out;
 }
-.sub-content .sub-content-grid .sub-featured header {
+.sub-content .sub-content-grid .sub-featured:hover {
+  transition: 0.2s all ease-in-out;
+  transform: scale(1.05);
+  z-index: 9;
+  cursor: pointer;
+}
+.sub-content .sub-content-grid .sub-featured:nth-child(1) .sub-featured-header {
+  background-image: url("https://images.pexels.com/photos/2885940/pexels-photo-2885940.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.sub-content .sub-content-grid .sub-featured:nth-child(2) .sub-featured-header {
+  background-image: url("https://images.pexels.com/photos/3581981/pexels-photo-3581981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.sub-content .sub-content-grid .sub-featured:nth-child(3) .sub-featured-header {
+  background-image: url("https://images.pexels.com/photos/2422264/pexels-photo-2422264.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.sub-content .sub-content-grid .sub-featured:nth-child(4) .sub-featured-header {
+  background-image: url("https://images.pexels.com/photos/340991/pexels-photo-340991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.sub-content .sub-content-grid .sub-featured .sub-featured-header {
   height: 55%;
   width: 100%;
   position: relative;
-  background-image: url("https://images.pexels.com/photos/1503009/pexels-photo-1503009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-.sub-content .sub-content-grid .sub-featured header span {
-  font-size: 0.65rem;
+.sub-content .sub-content-grid .sub-featured .sub-featured-header span {
+  font-size: 0.6rem;
   color: #fff;
   background: rgba(85, 85, 85, 0.795);
   position: absolute;
@@ -330,12 +379,12 @@ body {
   padding: 0.2rem 0.5rem;
   border-radius: 5px;
 }
-.sub-content .sub-content-grid .sub-featured header .sub-portrait-container {
+.sub-content .sub-content-grid .sub-featured .sub-featured-header .sub-portrait-container {
   position: absolute;
   bottom: -25px;
   right: 25px;
 }
-.sub-content .sub-content-grid .sub-featured header .sub-portrait-container .fa-check-circle {
+.sub-content .sub-content-grid .sub-featured .sub-featured-header .sub-portrait-container .fa-check-circle {
   position: absolute;
   bottom: 3px;
   right: 3px;
@@ -344,7 +393,7 @@ body {
   background-color: #eee;
   border-radius: 50%;
 }
-.sub-content .sub-content-grid .sub-featured header .sub-portrait-container .sub-featured-portrait {
+.sub-content .sub-content-grid .sub-featured .sub-featured-header .sub-portrait-container .sub-featured-portrait {
   width: 45px;
   height: 45px;
   border-radius: 50%;

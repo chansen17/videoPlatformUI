@@ -14,27 +14,40 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    // padding: 2rem;
 }
 
 .dashboard {
-    max-width: 1300px;
+    // max-width: 1300px;
+    // min-height: 100%;
+    // width: 100%;
+    // height: 90vh;
+
     min-height: 90vh;
-    width: 100%;
     height: 100%;
+    max-width: 1300px;
+    width: 100%;
     background: #201D2B;
     color: #eee;
     border-radius: 15px;
 
     display: grid;
-    grid-template-columns: 17vw auto;
+    grid-template-columns: 18vw auto;
 }
 
 .sidebar {
     position: fixed;
-    width: 15vw;
     min-height: 90vh;
     border-top-left-radius: 15px;
-    background: rgb(41, 32, 52);
+
+    width: 0;
+    display: none;
+
+    @media screen and (min-width: 960px) {
+        width: 15vw;
+        display: block;
+    }
+
 
     .night-mode {
         /* The switch - the box around the slider */
@@ -170,7 +183,6 @@ body {
 
 .header {
     height: 100px;
-    // background: blue;
     border-top-right-radius: 15px;
 
     display: grid;
@@ -217,6 +229,7 @@ body {
         .fa-bell {
             margin-left: 4rem;
             position: relative;
+            padding: .25rem;
             &:hover {
                 cursor: pointer;
 
@@ -225,8 +238,8 @@ body {
             &::after {
                 content: "";
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 4px;
+                right: 3px;
                 height: 6px;
                 width: 6px;
                 border-radius: 50%;
@@ -245,7 +258,7 @@ body {
 }
 
 .lead-content {
-    height: 400px;
+    min-height: 400px;
 
     .container {
         // 
@@ -257,9 +270,12 @@ body {
 
     .lead-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         max-width: 95%;
 
+        @media screen and (min-width: 960px) {
+            grid-template-columns: 1fr 1fr;
+        }
         .first-featured {
             margin: 1.25rem 0;
             width: 600px;
@@ -268,6 +284,13 @@ body {
             background-size: cover;
             background-position: center;
             border-radius: 20px;
+            transition: .2s all ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+                transition: .2s all ease-in-out;
+                z-index: 9;
+                cursor: pointer;
+            }
 
             .featured-title {
                 color: #fff;
@@ -311,6 +334,13 @@ body {
             background-size: cover;
             background-position: center;
             border-radius: 20px;
+            transition: .2s all ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+                transition: .2s all ease-in-out;
+                z-index: 9;
+                cursor: pointer;
+            }
 
             .second-featured-title {
                 color: #333;
@@ -363,8 +393,12 @@ body {
 
     .sub-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 1rem;
+
+        @media screen and (min-width: 960px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
 
         .sub-featured {
             height: 240px;
@@ -373,18 +407,37 @@ body {
             border-radius: 15px;
             background: #252836;
             color: #eee;
+            transition: .2s all ease-in-out;
+            &:hover {
+                transition: .2s all ease-in-out;
+                transform: scale(1.05);
+                z-index: 9;
+                cursor: pointer;
+            }
 
-            header {
+            &:nth-child(1) .sub-featured-header {
+                background-image: url('https://images.pexels.com/photos/2885940/pexels-photo-2885940.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            }
+            &:nth-child(2) .sub-featured-header {
+                background-image: url('https://images.pexels.com/photos/3581981/pexels-photo-3581981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            }
+            &:nth-child(3) .sub-featured-header {
+                background-image: url('https://images.pexels.com/photos/2422264/pexels-photo-2422264.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            }
+            &:nth-child(4) .sub-featured-header {
+                background-image: url('https://images.pexels.com/photos/340991/pexels-photo-340991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            }
+
+            .sub-featured-header {
                 height: 55%;
-                width: 100%;
+                width: 100%;    
                 position: relative;
-                background-image: url('https://images.pexels.com/photos/1503009/pexels-photo-1503009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
                 background-size: cover;
                 border-top-right-radius: 15px;
                 border-top-left-radius: 15px;
 
                 span {
-                    font-size: .65rem;
+                    font-size: .6rem;
                     color: #fff;
                     background: rgba(85, 85, 85, 0.795);
                     position: absolute;
