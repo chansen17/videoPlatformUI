@@ -11,6 +11,16 @@
 </head>
 <body>
 
+    <div id="toggler"><i class="far fa-heart"></i></div>
+
+    <div id="attribute">
+        <h1>Attribution</h1>
+        <br/>
+        <img id="attributeImg" src="https://cdn.dribbble.com/users/33073/screenshots/14958858/media/31cc974375832dd5d476a8eda5a28023.png" alt="Attribution to creator">
+        <br/>
+        <h2>Inspired: <a target="_blank" rel="noreferrer noopener" href="https://cdn.dribbble.com/users/33073/screenshots/14958858/media/31cc974375832dd5d476a8eda5a28023.png">dwinawan</a></h2>
+    </div>
+
     <div class="dashboard">
         <aside class="sidebar">
             <div class="heading">
@@ -47,7 +57,7 @@
         <main class="content-grid">
             <header class="header">
                 <div class="left">
-                    <input type="text" value="Inspired by https://dribbble.com/shots/14958858--Exploration-Skateboard-Video-Platform/attachments/6676841?mode=media">
+                    <input type="text" placeholder="Search">
                 </div>
                 <div class="spacer"></div>
                 <div class="right">
@@ -200,6 +210,15 @@
 <script>
     tippy('#bellNotification', {
         content: 'You have 7 Notifications!',
+      });
+
+      let attribute = document.querySelector('#attribute');
+      let toggler = document.querySelector('#toggler');
+      let dashboard = document.querySelector('.dashboard');
+
+      toggler.addEventListener('click', () => {
+        attribute.classList.toggle('active');
+        dashboard.classList.toggle('active');
       });
 </script>
 </body>
